@@ -112,7 +112,7 @@
     }
     
     .logotitle {
-        margin: 50px 0 30px 0;
+        margin: 40px 0 30px 0;
     }
     
     .logo {
@@ -134,20 +134,19 @@
     
     .description {
         text-align: center;
-        padding: 0px 0 50px 0;
+        padding: 0px 0 40px 0;
         font-weight: 200;
         font-size: 18px;
+        border-bottom: 1px solid {color:Dividers};
     }
     
     .nav { 
         padding-bottom: 20px;
         padding-top: 20px;
         text-align: center;
-        font-size: 11px;
+        font-size: 12px;
         text-transform: uppercase;
         font-weight: 700;
-        border-top: 1px solid {color:Dividers};
-        border-bottom: 1px solid {color:Dividers};
         font-family: 'Montserrat', 'Helvetica Neue', "Arial", sans-serif;
     }
         
@@ -441,17 +440,6 @@
         {block:Description}
             <div class="description">{Description}</div>
         {block:Description}
-        
-        <div class="nav">
-            {block:HasPages}
-            {block:Pages}<li><a href="{URL}">{Label}</a></li>{block:Pages}
-            {/block:HasPages}
-            {block:AskEnabled}<li><a href="/ask">Ask</a></li>{/block:AskEnabled}
-              {block:SubmissionsEnabled}<li><a href="/submit">Submit</a></li>{/block:SubmissionsEnabled}                 
-              <li><a href="/archive">Archive</a></li>
-              <li><a href="{RSS}">RSS</a></li>
-        
-    </div>
 
 
 <!-- CONTENT -->    
@@ -592,7 +580,17 @@
         
           <a href="http://dribbble.com/ryannpierce"><img src="http://static.tumblr.com/0hdvrqu/21lncogyx/dribbble.png" class="icon"></a>
 
-
+        <div class="nav">
+            {block:HasPages}
+            {block:Pages}<li><a href="{URL}">{Label}</a></li>{block:Pages}
+            {/block:HasPages}
+            {block:AskEnabled}<li><a href="/ask">Ask</a></li>{/block:AskEnabled}
+              {block:SubmissionsEnabled}<li><a href="/submit">Submit</a></li>{/block:SubmissionsEnabled}                 
+              <li><a href="/archive">Archive</a></li>
+              <li><a href="{RSS}">RSS</a></li>
+        
+    </div>
+    
     <p>{Title}</p>
     </div>
 {/block:IfNotInfiniteScroll}
